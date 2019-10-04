@@ -1,0 +1,92 @@
+<div class="container">
+<div>
+  <img style="width: 100%;height: 200px;" src="..\assets\img\banner.png">
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Trang chủ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/gioithieu">giới thiệu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/lienhe">liên hệ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/gopy">góp ý</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/hoidap">hỏi đáp</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/thi">thi trắc nghiệm</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav" style="padding-left: 65%">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i class='fas fa-address-card'></i> Tài Khoản
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#" routerLink="/dangky">Đăng ký</a>
+        <a class="dropdown-item" href="#" routerLink="/dangnhap">Đăng nhập</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" routerLink="/dmk">Đổi mật khẩu</a>
+        <a class="dropdown-item" href="#">sửa đổi tài khoản</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="row">
+<div class="col-8">
+  <router-outlet></router-outlet>
+</div>
+<div class="col-4">
+  <div style="padding-top: 10px" >
+    <button type="button" class="btn" style="width:331px ;"(click)="forgot=!forgot">
+      <a style="font-size:+4;" routerLink="/danhmucmh">DANH MỤC MÔN HỌC</a>
+    </button>
+    <div style="background-color: whitesmoke;"[hidden]="forgot">
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+          Kiểm thử và thiết kế</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+          SQL server</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+          Điện toán đám mây</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Lập trình PHP</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Lập trình Android nâng cao</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Lập trình Android cơ bản</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Thiết kế Layout</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Thiết kế giao diện trên Android</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Quản lý dự án với alige</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Internet Marketing</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Lập trình hướng đối tượng với Java</a></button>
+      <button style="border-radius: 2px;width: 331px;text-align: left">
+        <a href="#">
+        Lập trình ASP.NET</a></button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
