@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-6" *ngFor="let danhmuc of subject  | paginate: { itemsPerPage:sodong, currentPage:sotrang }">
+        <div class="card text-center">
+            <a [routerLink]="['/thitracnghiem',danhmuc.Name,danhmuc.Id]" style="text-decoration: none;">
+                <div>
+                    <img src="assets/img/{{danhmuc.Logo}}" alt="...">
+                </div>
+                <div class="card-footer text-muted" style="height: auto; ">
+                    {{danhmuc.Name}}
+                </div>
+            </a>
+        </div>
+        <br>
+    </div>
+    <div class="container">
+        <div class="card-footer text-muted" style="font-size: 30px;">
+            <a (click)="luipage()"><i class="fa fa-hand-o-left"></i></a>
+            <a (click)="nextpage()" style="float: right;"><i class="fa fa-hand-o-right"></i></a>
+            <br>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <br>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Username</label>
+            <input type="text" class="form-control" id="validationCustom01" [(ngModel)]="formSudent.username"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Họ và tên</label>
+            <input type="text" class="form-control" id="validationCustom02" [(ngModel)]="formSudent.fullname"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Email</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="abc@gmail.com"
+                    [(ngModel)]="formSudent.email" [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+    </div>
+    <label for="exampleInputEmail1">Nhập mật khẩu mới</label>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="nhập tài khoản" [(ngModel)]="formSudent.passwordnew"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="buuton" class="btn btn-primary mb-2" (click)="EditPass()">Đồng ý</button>
+    </div>
+    <h2>
+        Bảng test
+    </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th scope="col">fullname</th>
+                <th scope="col">birthday</th>
+                <th scope="col">email</th>
+                <th scope="col">gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sv of students">
+                <th>{{sv.username}}</th>
+                <td>{{sv.password}}</td>
+                <td>{{sv.fullname}}</td>
+                <td>{{sv.birthday| date :'dd-MM-yyyy'}}</td>
+                <td>{{sv.email}}</td>
+                <td>{{sv.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,20 +1,46 @@
-<div class="card">
-    <h3 class="card-header">XÂY DỰNG TRANG WEB</h3>
-    <div class="card-body" style="height: 200px">
-       
-    </div>
-    <div class="card-header" style="height: 40px;padding-left: 35%">
-        <button style="border-radius: 10px; ">
-            <span class="glyphicon glyphicon-hand-up"></span> Up
-        </button>
-        <button style="border-radius: 10px; ">
-            <span class="glyphicon glyphicon-hand-left"></span> Left
-        </button>
-        <button style="border-radius: 10px; ">
-            <span class="glyphicon glyphicon-hand-right"></span> Right
-        </button>
-        <button style="border-radius: 10px; ">
-            <span class="glyphicon glyphicon-hand-down"></span> Down
-        </button>
+<div class="container">
+    <br>
+    <div class="card " *ngFor="let qui of quiz | paginate: { itemsPerPage: sodong, currentPage: sotrang }">
+
+        <div class="card-header" align="left">
+            {{name}}
+        </div>
+        <div class="card-body">
+            <p style="text-align: center;">Câu{{cau}}:{{qui.Text}}</p>
+            <div class="row" style="margin-left: 10px;">
+                <div class="form-check form-check-inline formradio">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        [value]="qui.Answers[0].Id" [(ngModel)]="thongtin.valuee" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label">{{qui.Answers[0].Text}}</label>
+                </div>
+            </div>
+
+            <div class="row" style="margin-left: 10px;">
+                <div class="form-check form-check-inline formradio">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        [value]="qui.Answers[1].Id" [(ngModel)]="thongtin.valuee" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label">{{qui.Answers[1].Text}}</label>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 10px;">
+                <div class="form-check form-check-inline formradio">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        [value]="qui.Answers[2].Id" [(ngModel)]="thongtin.valuee" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label">{{qui.Answers[2].Text}}</label>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 10px;">
+                <div class="form-check form-check-inline formradio">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        [value]="qui.Answers[3].Id" [(ngModel)]="thongtin.valuee" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label">{{qui.Answers[3].Text}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted" style="font-size: 30px">
+            <a (click)="luipage()" style="float: left;"><i class="fa fa-hand-o-left"></i></a>
+            <a (click)="nextpage()" style="float:right"><i class="fa fa-hand-o-right"></i></a>
+            <br>
+        </div>
     </div>
 </div>

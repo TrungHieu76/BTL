@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DangkyComponent } from './dangky.component';
+import { SuadoitaikhoanComponent } from './suadoitaikhoan.component';
 
-describe('DangkyComponent', () => {
-  let component: DangkyComponent;
-  let fixture: ComponentFixture<DangkyComponent>;
+describe('SuadoitaikhoanComponent', () => {
+  let component: SuadoitaikhoanComponent;
+  let fixture: ComponentFixture<SuadoitaikhoanComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DangkyComponent ]
+      declarations: [ SuadoitaikhoanComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DangkyComponent);
+    fixture = TestBed.createComponent(SuadoitaikhoanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
